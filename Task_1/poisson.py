@@ -4,7 +4,7 @@ for i in range(3):
     mu=10
     s = np.random.poisson(mu,1000)
     np.savetxt("Data/Poisson/Dataset"+str(i)+".csv",s,delimiter=",")
-    bins=plt.hist(s,14,density=True)
+    count,bins,ignored=plt.hist(s,14,density=True)
     plt.ylabel('Probability')
     plt.xlabel('Data')
     plt.title('Histogram for Random Poisson Distribution')

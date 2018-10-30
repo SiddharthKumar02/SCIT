@@ -16,7 +16,7 @@ for i in range(100):
     with open("Data/Average/avg/Dataset"+str(i)+".csv","w") as f:
         for item in Data:
             f.write("%s\n" % item)
-    bins=plt.hist(Data,30,density=True)
+    count,bins,ignored=plt.hist(Data,30,density=True)
     plt.ylabel('Probability')
     plt.xlabel('Data')
     plt.title('Histogram for Average of Normal & Poisson Distribution')
